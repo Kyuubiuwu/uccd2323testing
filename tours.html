@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.00">
+  <link rel="stylesheet" href="tours.css">
+  <link rel="stylesheet" href="footer.css">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="travelling.png" class="logo" alt="Logo Images">
+    <ul class="sidebar">
+        <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <li><a href="index.html">Home</li></a></li>
+        <li><a href="popular.html">Popular Places</a></li>
+        <li><a href="tours.html">Packages</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <ul class="normalNav">
+        <li class="hide"><a href="index.html">Home</li>
+        <li class="hide"><a href="popular.html">Popular Places</a></li>
+        <li class="hide"><a href="tours.html">Packages</a></li>
+        <li class="hide"><a href="ContactUs.html">Contact Us</a></li>
+        <li class="hide"><a href="feedback.html">Feedback</a></li>
+        <li onclick=showSideBar() id="sidebarOn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+
+</nav>
+<main>
+  <section class="section-tours" id="tours">
+    <div class="container tour-box" data-aos="fade-up">
+      <header class="tour-box__heading">
+        <h2 class="heading color-blue margin-bottom">
+          Tours in Malaysia
+        </h2>
+        <p id="topText">
+          Discover the magic of Malaysia! From ancient rainforests and pristine beaches to bustling cities and vibrant cultures, our tours offer unforgettable experiences for every traveler.
+        </p>
+      </header>
+
+      <article class="tour-box__cards">
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="pulauLangkawi.jpeg"
+            alt="Pulau Langkawi"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Pulau Langkawi</h3>
+              <p class="price">RM1080</p>
+            </div>
+
+            <div class="t-card__description">
+              An archipelago of idyllic islands offering pristine beaches, duty-free shopping, and natural wonders.            
+            </div>
+            <div class="t-card__items">
+              <div class="days">5 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.9k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="penang.jpg"
+            alt="Pulau Pinang"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Penang</h3>
+              <p class="price">RM1920</p>
+            </div>
+
+            <div class="t-card__description">
+              A vibrant island blending rich history, diverse cultures, and mouthwatering street food.            </div>
+            <div class="t-card__items">
+              <div class="days">6 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.9k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="KL.jpg"
+            alt="Kuala Lumpur"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Kuala Lumpur</h3>
+              <p class="price">RM1500</p>
+            </div>
+
+            <div class="t-card__description">
+              A bustling metropolis where modern skyscrapers meet historical landmarks.
+            </div>
+
+            <div class="t-card__items">
+              <div class="days">3 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.8k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="kotaKinabalu.jpg"
+            alt="Kota Kinabalu, Sabah"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Kota Kinabalu</h3>
+              <p class="price">RM3500</p>
+            </div>
+
+            <div class="t-card__description">
+              Gateway to lush rainforests, majestic mountains, and stunning islands in Borneo.
+            </div>
+
+            <div class="t-card__items">
+              <div class="days">7 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.8k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="malacca.jpg"
+            alt="Malacca"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Malacca</h3>
+              <p class="price">RM900</p>
+            </div>
+
+            <div class="t-card__description">
+              A UNESCO World Heritage site steeped in history with Dutch and Portuguese influences.
+            </div>
+
+            <div class="t-card__items">
+              <div class="days">5 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.7k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card" data-aos="flip-left" data-aos-duration="1000">
+          <img
+            src="batu caves.jpeg"
+            alt="Batu Caves, Selangor"
+            width="500"
+            height="500"
+            class="t-card__img"
+          />
+
+          <div class="t-card__content">
+            <div class="t-card__title">
+              <h3 class="name">Batu Caves</h3>
+              <p class="price">RM1300</p>
+            </div>
+
+            <div class="t-card__description">
+              A limestone hill featuring a Hindu cave temple and colorful statues.
+            </div>
+
+            <div class="t-card__items">
+              <div class="days">2 Days</div>
+              <div class="likes">
+                <img
+                  src="heart.svg"
+                  alt="heart"
+                  width="20"
+                  height="20"
+                />
+                4.8k
+              </div>
+              <div class="book">
+                Book Now!
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="popUp">
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">billing address</h3>
+                <div class="close-btn" id="closeBtn1">&times;</div>
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="John Smith">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>Travelling Date :</span>
+                    <input type="date" placeholder="">
+                </div>
+                <div class="inputBox">
+                    <span>Address :</span>
+                    <input type="text" placeholder="Jalan Universiti, 31900 Kampar, Perak">
+                </div>
+
+                <div class="flex">
+                  <div class="inputBox">
+                    <span>Phone Number: </span>
+                    <input type="text" placeholder="0174235895">
+                  </div>
+                  <div class="inputBox">
+                    <span>Pax: </span>
+                    <input type="number" placeholder="3">
+                  </div>
+              </div>
+
+            </div>
+            <div class="col">
+                <h3 class="title">payment</h3>
+                <div class="close-btn" id="closeBtn2">&times;</div>
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="mr. John Smith">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <p id="paymentConfirm">Payment received!</p>
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+    </form>
+</div>   
+</main>
+<div id="footerContainer">
+</div>
+<script>
+  function showSideBar(){
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display="flex";
+  }
+  function hideSideBar(){
+      const sidebar = document.querySelector(".sidebar");
+      sidebar.style.display="none";
+  }
+</script>
+<script>
+  $(document).ready(function() {
+    $("#footerContainer").load("footer.html");
+    const $closeBtn = $(".close-btn");
+    const $payForm = $(".popUp");
+    $closeBtn.on("click", function() {
+      $payForm.css("display", "none");
+      $("body").css("backgroundColor", ""); 
+    });
+    $(".book").on("click", function() {
+      $payForm.css("display", "flex");
+      $("#paymentConfirm").hide();
+    });
+
+    // Function to set cookies
+    function setUserDetailsCookies() {
+        const fullName = $("input[placeholder='John Smith']").val();
+        const email = $("input[type='email']").val();
+        const phoneNumber = $("input[placeholder='0174235895']").val(); 
+        const address = $("input[placeholder='Jalan Universiti, 31900 Kampar, Perak']").val(); 
+
+        $.cookie('fullName', fullName, { expires: 30 });
+        $.cookie('email', email, { expires: 30 });
+        $.cookie('phoneNumber', phoneNumber, { expires: 30 });
+        $.cookie('address', phoneNumber, { expires: 30 });
+    }
+
+    // Function to get cookies
+    function getUserDetailsFromCookies() {
+        const fullName = $.cookie('fullName');
+        const email = $.cookie('email');
+        const phoneNumber = $.cookie('phoneNumber');
+        return { fullName, email, phoneNumber };
+    }
+
+    // Function to pre-fill input fields with cookie values
+    function prefillInputFields() {
+        const userDetails = getUserDetailsFromCookies();
+        $("input[placeholder='John Smith']").val(userDetails.fullName);
+        $("input[type='email']").val(userDetails.email);
+        $("input[placeholder='Your phone number placeholder']").val(userDetails.phoneNumber); 
+    }
+
+    // Attach event listeners to input fields to trigger pre-filling
+    $("input[placeholder='John Smith'], input[type='email'], input[placeholder='Your phone number placeholder']").focus(function() {
+        prefillInputFields();
+    });
+
+    // Attach the cookie setting function to the form submission
+    $(".submit-btn").click(function(event) {
+        event.preventDefault(); 
+        $("#paymentConfirm").show();
+        setUserDetailsCookies(); 
+    });
+  });
+</script>
+</body>
+</html>

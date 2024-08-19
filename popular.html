@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malaysia</title>
+    <link rel="stylesheet" href="popular.css"> </head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<body>
+    <header>
+        <div id="nav-container"></div>
+
+        <script>
+            $(document).ready(function() {
+                $("#nav-container").load("navbar.html");
+            });
+        </script>
+    </header>
+    
+        <div class = "carousel">
+            <div class="list">
+                <div class="destination">
+                    <a href="penang.html">
+                        <img src="https://image-tc.galaxy.tf/wijpeg-9j3ux7drhby0iny1evej1e38j/sunset-at-penang-bridge.jpg?width=1920" alt="Penang">
+                        <div class="content">
+                            <div class="name">Penang</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="destination">
+                    <a href="langkawi.html">
+                        <img src="https://images.thewest.com.au/publication/C-10827807/e46bb2f57da2dad595356b28ef7c00ea3c18f414.jpg" 
+                        alt="Pulau Langkawi">
+                        <div class="content">
+                            <div class="name">Pulau Langkawi</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="destination">
+                    <a href="kinabalu.html">
+                        <img src="https://cdn.pixabay.com/photo/2020/12/04/10/19/mount-kinabalu-5802777_1280.jpg" alt="Kota Kinabalu">
+                        <div class="content">
+                            <div class="name">Kota Kinabalu</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="destination">
+                    <a href="kl.html">
+                        <img src="https://cdn.pixabay.com/photo/2013/08/09/05/58/kuala-lumpur-170985_1280.jpg" alt="Kuala Lumpur">
+                        <div class="content">
+                            <div class="name">Kuala Lumpur</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="destination">
+                    <a href="melaka.html">
+                        <img src="https://cdn.pixabay.com/photo/2015/09/25/10/04/dutch-square-957004_1280.jpg" alt="Melaka">
+                        <div class="content">
+                            <div class="name">Malacca</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="destination">
+                    <a href="batucaves.html">
+                        <img src="https://images.pexels.com/photos/3731615/pexels-photo-3731615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Batu Caves">
+                        <div class="content">
+                            <div class="name">Batu Caves</div>
+                            <div class="buttons">
+                                <button class="button">Explore</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="destination">
+                <img src="https://image-tc.galaxy.tf/wijpeg-9j3ux7drhby0iny1evej1e38j/sunset-at-penang-bridge.jpg?width=1920">
+                <div class="content">
+                    <div class="title">
+                        Penang
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination">
+                <img src="https://images.thewest.com.au/publication/C-10827807/e46bb2f57da2dad595356b28ef7c00ea3c18f414.jpg">
+                <div class="content">
+                    <div class="title">
+                        Pulau Langkawi
+                    </div>
+                </div>
+            </div>
+            
+            <div class="destination">
+                <img src="https://cdn.pixabay.com/photo/2020/12/04/10/19/mount-kinabalu-5802777_1280.jpg">
+                <div class="content">
+                    <div class="title">
+                        Kota Kinabalu
+                    </div>
+                </div>
+            </div>
+            <div class="destination">
+                <img src="https://cdn.pixabay.com/photo/2013/08/09/05/58/kuala-lumpur-170985_1280.jpg">
+                <div class="content">
+                    <div class="title">
+                        Kuala Lumpur
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination">
+                <img src="https://cdn.pixabay.com/photo/2015/09/25/10/04/dutch-square-957004_1280.jpg">
+                <div class="content">
+                    <div class="title">
+                        Malacca
+                    </div>
+                </div>
+            </div>
+
+            <div class="destination">
+                <img src="https://images.pexels.com/photos/3731615/pexels-photo-3731615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="content">
+                    <div class="title">
+                        Batu Caves
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+    <script src="popular.js"></script>
+
+    <footer>
+        </footer>
+
+</body>
+</html>

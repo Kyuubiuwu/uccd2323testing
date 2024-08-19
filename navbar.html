@@ -1,0 +1,137 @@
+  <style>
+    nav{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgb(91, 85, 85), 0.2;
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      
+      .sidebar a{
+        color: #f5f5f5;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 20px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .sidebar li{
+        list-style: none;
+      }
+      
+      nav .sidebar li a:hover{
+        font-size: 1.5rem;
+        transition: all 0.4s ease;
+        opacity: 1.0;
+      }
+      
+      nav .logo{
+        margin-right: 10px;
+        padding: 10px;
+        width: 80px;
+      }
+      
+      nav ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      
+      nav .normalNav li{
+        list-style: none;
+        display: inline-block;
+        margin-left: 60px;
+      }
+      
+      nav .normalNav li a{
+        text-decoration: none;
+        position: relative;
+        color: white;
+        font-size: 1.5em;
+        right: 20px;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+      }
+      
+      nav .normalNav li a:hover{
+        font-size: 2rem;
+        transition: all 0.4s ease;
+        opacity: 1.0;
+      }
+
+    @media (max-width: 900px){
+        nav ul li a:hover{
+          opacity: 1.0;
+        }
+        nav ul .hide{
+          display: none;
+        }
+        #sidebarOn{
+        display:flex;
+        }
+      }
+      @media (min-width: 900px){
+        .back-video{
+          width: 100%;
+          height: 100%;
+        }
+        #sidebarOn{
+          display:none;
+        }
+      }
+    </style>
+    
+    
+    <nav class="navbar">
+        <script>
+            function showSideBar(){
+                const sidebar = document.querySelector(".sidebar");
+                sidebar.style.display="flex";
+            }
+            function hideSideBar(){
+                const sidebar = document.querySelector(".sidebar");
+                sidebar.style.display="none";
+            }
+        </script>
+        
+        <img src="travelling.png" class="logo" alt="Logo Images">
+        <ul class="sidebar">
+            <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            <li><a href="index.html">Home</li></a></li>
+            <li><a href="popular.html">Popular Places</a></li>
+            <li><a href="tours.html">Packages</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+        <ul class="normalNav">
+            <li class="hide"><a href="index.html">Home</li>
+            <li class="hide"><a href="popular.html">Popular Places</a></li>
+            <li class="hide"><a href="tours.html">Packages</a></li>
+            <li class="hide"><a href="ContactUs.html">Contact Us</a></li>
+            <li class="hide"><a href="feedback.html">Feedback</a></li>
+            <li onclick=showSideBar() id="sidebarOn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+  
+    </nav>

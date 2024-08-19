@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="test.js"></script>
+    <title>Malacca | Malaysia</title>
+  </head>
+  <body>
+    <header style="background-image: linear-gradient(
+      rgba(45, 92, 132, 0.5),
+      rgba(45, 92, 132, 0.5)
+    ), url('https://cdn.pixabay.com/photo/2015/09/25/10/04/dutch-square-957004_1280.jpg');">
+    <div id="nav-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#nav-container").load("navbar.html");
+        });
+    </script>      
+    <div class="section__container">
+        <div class="header__content">
+          <h1>MALACCA</h1>
+          <p>
+            Malacca, also known as Melaka, is a captivating historical city on the southwestern coast of Peninsular Malaysia. 
+            Steeped in history and adorned with a rich cultural tapestry, it stands as a testament to the convergence of diverse influences that have shaped its identity.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="display__container">
+      <div class="section__container">
+        <h2 class="section__title">Activities</h2>
+        <p class="section__subtitle">
+            Embrace the unknown, discover the extraordinary.<br>
+            Say yes to new adventures.
+        </p>
+        <div class="display__grid">
+          <div class="display__card">
+            <img src="https://huskitory.com.my/wp-content/uploads/2023/04/huskies-group-photo-scaled.jpg" 
+              alt="Create memories that will last a lifetime as you interact with a pack of adorable Siberian Huskies. 
+              Cuddle up for heartwarming photos, play fetch in the specially designed play area, and even take a scenic walk with these gentle giants. 
+              The Huskitory offers a unique opportunity to capture stunning photos and create unforgettable experiences with these magnificent dogs."/>
+            <div class="text-overlay">The Huskitory</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://cdn.pixabay.com/photo/2015/09/25/10/29/river-957061_960_720.jpg" 
+              alt=" Discover hidden gems and gain a fresh perspective on Melaka's iconic landmarks as you cruise along its historic river. 
+              Capture stunning photos of the city skyline, admire the intricate details of its heritage buildings, 
+              and witness the daily lives of local communities along the riverbanks."/>
+            <div class="text-overlay">Malacca River</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="baba.jpg" 
+              alt="This beautifully preserved 19th-century mansion is a photographer's dream. 
+              Every corner offers a stunning backdrop for capturing the essence of Peranakan culture. 
+              From the ornate courtyards and colorful tiles to the intricate woodwork and antique furnishings, 
+              this museum provides endless opportunities for capturing stunning photographs."/>
+            <div class="text-overlay">Baba & Nyonya Heritage Museum</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://img.freepik.com/free-photo/blue-sky-summer-malaysia-ancient-unesco_1122-1664.jpg?t=st=1723387515~exp=1723391115~hmac=144f9cda073c0d58f857ed994c4e75f2be5f9a4c15f781051e0202ed7586e12d&w=900" 
+              alt="Step back in time and experience the nostalgic charm of Melaka's Red Square. 
+              Wander through the cobblestone streets, admire the beautifully preserved buildings, 
+              and imagine the bustling trade and cultural exchange that once took place here. 
+              This enchanting square is a gateway to Melaka's rich history and a must-visit for any traveler seeking a glimpse into the past."/>
+            <div class="text-overlay">Red Square (Dutch Square)</div>
+          </div>
+        </div>
+      </div>
+       <!-- Popup Modal -->
+    <div class="popup-img">
+      <span>&times;</span>
+      <img src="" alt="Popup Image"/>
+      <div id="description"></div>
+
+    </div>
+    <script>
+      document.querySelectorAll('.display__grid img').forEach(image=>{
+        image.onclick=()=>{
+          document.querySelector('.popup-img').style.display='block';
+          document.querySelector('.popup-img img').src=image.getAttribute('src');
+          var descriptionText = document.getElementById('description');
+          descriptionText.innerHTML = image.getAttribute('alt');
+        }
+        });
+        document.querySelector('.popup-img span').onclick=()=>{
+          document.querySelector('.popup-img').style.display='none';
+        }
+    </script>
+    </section>
+    
+    
+    
+  <section class="slider__container">
+    <div class="section__container">
+      <h2 class="section__title">Galleries</h2>
+      <p class="section__subtitle">
+        "Adventure is worthwhile in itself."
+      </p>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1596034951/blog/zakm5guwyfbvpxdixjj7.webp">
+          </div>
+          <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2013/06/07/15/07/colonial-houses-122433_960_720.jpg">
+          </div>
+          <div class="item">
+            <img src="https://images.pexels.com/photos/17319025/pexels-photo-17319025/free-photo-of-street-with-kampong-kling-mosque-in-malacca-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+          </div>
+          <div class="item">
+            <img src="https://images.pexels.com/photos/15552604/pexels-photo-15552604/free-photo-of-malacca-straits-mosque-in-malaysia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+          </div>
+          <div class="item">
+            <img src="https://www.agoda.com/wp-content/uploads/2020/04/Chicken-rice-balls-Malacca-food-Peranakan-cuisine-Malaysia.jpg">
+          </div>
+          <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Melaka_Malaysia_A-Famosa-01.jpg">
+          </div>
+          <div class="item">
+            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1639563076/blog/b7h1nmhea7zv4zw3hd1b.webp">
+          </div>
+          <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2015/09/25/10/12/river-957016_960_720.jpg">
+          </div>
+          <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2018/08/13/05/53/malaysia-3602332_960_720.jpg">
+          </div>
+          <div class="item">
+            <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1596035170/blog/u7hfvm0el0ngudjmzzer.webp">
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+
+        <!-- indicators -->
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="footerContainer"></div>
+
+  <script>
+      $(document).ready(function() {
+          $("#footerContainer").load("footer.html");
+      });
+  </script>
+  
+  </body>
+</html>
