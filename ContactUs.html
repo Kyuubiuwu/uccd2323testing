@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="importmap">   
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+</head>
+<body>
+
+          <nav class="navbar">
+            <img src="travelling.png" class="logo" alt="Logo Images">
+            <ul class="sidebar">
+                <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <li><a href="index.html">Home</li></a></li>
+                <li><a href="popular.html">Popular Places</a></li>
+                <li><a href="tours.html">Packages</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <ul class="normalNav">
+                <li class="hide"><a href="index.html">Home</li>
+                <li class="hide"><a href="popular.html">Popular Places</a></li>
+                <li class="hide"><a href="tours.html">Packages</a></li>
+                <li class="hide"><a href="ContactUs.html">Contact Us</a></li>
+                <li class="hide"><a href="feedback.html">Feedback</a></li>
+                <li onclick=showSideBar() id="sidebarOn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+          </ul>
+      </nav>
+
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="Con.jpg" alt="Contact Image">
+            </div>
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <form action="#">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <button type="submit">Contact Us</button>
+                </form>
+
+                <div class="contact-info">
+                    <p><strong>Contact</strong><br>ooiguancheng1118@1utar.my</p>
+                    <p><strong>Based in</strong><br>Kampar, Perak</p>
+                    <div class="social-media">
+                        <a href="https://www.facebook.com/share/kDGTwBTSpZPv5Yqw/?mibextid=qi2Omg" target="_blank">
+                            <img src="facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/malaysia.truly.asia?igsh=MW90dzI2ajd6eTJnOQ==" target="_blank">
+                            <img src="Insta.png" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbotDiv"></div>
+    <!-- Cookie Consent Box -->
+    <div id="consentBox">
+        <div id="consentContent">
+            <header id="consentHeader">Cookies: The choice is yours</header>
+            <p>We use cookies to make our site work well for you and so we can continually improve it. The cookies that are necessary to keep the site functioning are always on.</p>
+            <div class="buttons">
+                <button class="consentButton" onclick="acceptCookies()">Accept Cookies</button>
+                <button class="rejectButton" onclick="rejectCookies()">Reject</button>
+            </div>
+        </div>
+    </div>
+      
+      <script>
+        function showSideBar(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display="flex";
+        }
+        function hideSideBar(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display="none";
+        }
+    </script>
+
+      <script src="cookies.js"></script>
+      <div id="footerContainer"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#footerContainer").load("footer.html");
+        });
+        $(document).ready(function() {
+            $(".chatbotDiv").load("chatbot.html");
+        })
+    </script>
+</body>
+</html>

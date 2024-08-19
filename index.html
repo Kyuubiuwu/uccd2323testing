@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> 
+</head>
+<body>
+    <div class="hero">
+        <video id="video" autoplay loop muted plays-inline class="back-video">
+            <source src="Penang.mp4" type="video/mp4">
+        </video>
+        <img id="lastControl" src="last.png" alt="lastPicImage">
+        <img id="nextControl" src="/next.png" alt="nextPicImage">
+        <nav class="navbar">
+            <img src="travelling.png" class="logo" alt="Logo Images">
+            <ul class="sidebar">
+                <li onclick="hideSideBar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <li><a href="index.html">Home</li></a></li>
+                <li><a href="popular.html">Popular Places</a></li>
+                <li><a href="tours.html">Packages</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <ul class="normalNav">
+                <li class="hide"><a href="index.html">Home</li>
+                <li class="hide"><a href="popular.html">Popular Places</a></li>
+                <li class="hide"><a href="tours.html">Packages</a></li>
+                <li class="hide"><a href="ContactUs.html">Contact Us</a></li>
+                <li class="hide"><a href="feedback.html">Feedback</a></li>
+                <li onclick=showSideBar() id="sidebarOn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1 id="sceneName">Penang</h1>
+            <a href="penang.html" id="aLink">Explore</a>
+        </div>
+    </div>
+    <script>
+        function showSideBar(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display="flex";
+        }
+        function hideSideBar(){
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display="none";
+        }
+    </script>
+    <script>
+    var videoCount = 0;
+    var nameArray = ["Penang" ,"Pulau Langkawi", "Kuala Lumpur", "Kota Kinabalu", "Malacca", "Batu Caves"];
+    var videoArray = ["Penang.mp4","PulauLangkawi.mp4", "kl.mp4", "KotaK.mp4", "Malacca.mp4", "BatuCaves.mp4"];
+    var anchorAddress = ["penang.html","langkawi.html","kl.html","kinabalu.html","melaka.html","batucaves.html"];
+    
+    $("#nextControl").click(nextVideo);
+    $("#lastControl").click(lastVideo);
+
+    function nextVideo() {
+        videoCount++;
+        if (videoCount > 5) {
+            videoCount = 0;
+        }
+        $("#sceneName").html(nameArray[videoCount]);
+        $("#video").attr("src", videoArray[videoCount]);
+        $("#aLink").attr("href",anchorAddress[videoCount]);
+    }
+
+    function lastVideo() {
+        videoCount--;
+        if (videoCount < 0) {
+            videoCount = 5;
+        }
+        $("#sceneName").html(nameArray[videoCount]);
+        $("#video").attr("src", videoArray[videoCount]);
+        $("#aLink").attr("href",anchorAddress[videoCount]);
+    }
+    </script>
+</body>
+</html>

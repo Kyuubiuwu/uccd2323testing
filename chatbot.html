@@ -1,0 +1,224 @@
+<style>
+  
+.chatbot-toggler{
+  position: fixed;
+  right: 40px;
+  bottom: 35px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  background: #97b3ff;
+  border-radius: 50%;
+}
+
+.chatbot-toggler span{
+  position: absolute;
+}
+
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child{
+  opacity: 0;
+}
+.show-chatbot .chatbot-toggler span:last-child{
+  opacity: 1;
+}
+.chatbot{
+  position: fixed;
+  right:40px;
+  bottom: 100px;
+  width:450px;
+  transform: scale(0.5);
+  opacity: 0;
+  pointer-events: none;
+  background: lightgray;
+  border-radius: 15px;
+  box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+  0 32px 64px -48px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.chatbot header{
+  background: #8995a3 ;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+.chatbot header span{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  color:white;
+  display: none;
+  transform: translateY(-50%);
+}
+
+.show-chatbot .chatbot{
+  transform: scale(1.0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chatbot header h2{
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.chatbot .chatbox{
+  height: 465px;
+  overflow-y: auto;
+  padding: 30px 20px 70px;
+}
+
+.chatbot .chat{
+  display:flex
+}
+
+.chatbox .incoming span{
+  height: 32px;
+  width: 32px;
+  color: #fff;
+  background: #8995a3;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 4px;
+  margin: 0 10px 7px 0;
+}
+
+.chatbox .outgoing{
+  margin: 20px 0 ;
+  justify-content: flex-end;
+}
+
+.chatbot .chat p{
+  background: #e0f2f1;
+  border-radius: 10px 10px 0 10px;
+  padding: 12px 16px;
+  color: #333333;
+  font-size: 0.95rem;
+}
+.chatbox .incoming p{
+  color: #333333;
+  background: #f0f0e1;
+  border-radius: 10px 10px 0 10px;
+}
+
+.chatbot .chat-input {
+  position: absolute;
+  bottom: 0;
+  width:100%;
+  background: white;
+  display: flex;
+  padding: 5px 20px;
+  border-top : 1px solid #ccc;
+}
+
+.chat-input textarea{
+  height: 55px;
+  width: 85%;
+  border:none;
+  outline: none;
+  font-size: 0.95rem;
+  resize:none;
+  padding: 16px 15px 16px 0;
+}
+
+.chat-input span{
+  align-self: center;
+  height: 55px;
+  line-height: 55px;
+  color: #724ae8;
+  font-size: 1.35rem;
+  cursor:pointer;
+  visibility: hidden;
+  right: 50px;
+}
+
+.chat-input textarea:valid ~span{
+  visibility: visible;
+}
+
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+<button class="chatbot-toggler">
+  <span class="material-symbols-outlined">mode_comment</span>
+  <span class="material-symbols-outlined">close</span>
+</button>
+<div class="chatbot">
+  <header>
+    <h2>Chatbot</h2>
+    <span class="material-symbols-outlined">close</span>
+  </header>
+  <ul class="chatbox" id="chat-history">
+    <li class="chat incoming">
+      <span class="material-symbols-outlined">smart_toy</span>
+      <p>Hi there <br> How can i help you today</p>
+    </li>
+  </ul>
+  <div class="chat-input">
+    <textarea placeholder="Enter a message..." id="user-input" required></textarea>
+    <span id="send-btn" class="material-symbols-outlined">send</span>
+  </div>
+</div>
+
+<script type="module">
+  import { GoogleGenerativeAI } from "@google/generative-ai";
+
+
+  const API_KEY = "AIzaSyAuAnixg-mUNv_ICBCN05cnmuLhSotLs_k";
+
+  const genAI = new GoogleGenerativeAI(API_KEY);
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+
+  const generationConfig = {
+  temperature: 1.0,     
+  topK: 1,
+  topP: 1,
+  maxOutputTokens: 200,          //response in most 1000words
+  };
+  
+  const chat = model.startChat({      //pre-trained specify it for our website usage 
+  generationConfig,
+  history: [
+    {
+      role: "user",
+      parts: [{ text: "You are a customer service embedded within a tourism website for a CS student assignment, the website provides only 6 tourism packages to destinations include Batu Caves, Penang, Kuala Lumpur, Kota Kinabalu, Malacca and Pulau Langkawi"}],
+    },
+    {
+      role: "user",
+      parts: [{ text: "Your assignment teammates include Ooi Guan Cheng, Tan Yuan Seng and Liew Chee Kang"}],
+    },
+    {
+      role: "user",
+      parts: [{ text: "You are able to plan a 3 to 5 days travel package to user if they ask, the destination can only to Pulau Langkawi, Kuala Lumpur, Batu Caves, Malacca, Penang and Kota Kinabalu, the estimated cost must be around RM1000 to RM3000 depends on the complexity of the travelling package. And also tell user to leave their contact to let us reach out to him on more detailed pacakge information."}],
+    },
+  ],
+  });
+
+  const chatHistory = document.getElementById('chat-history');
+  const userInput = document.querySelector(".chat-input textarea");
+  const sendButton = document.querySelector(".chat-input span");
+  const chatbotToggler = document.querySelector(".chatbot-toggler");
+  sendButton.addEventListener("click", run);
+
+  async function run() {
+  const userMessage = userInput.value;
+  chatHistory.innerHTML += `<li class="chat outgoing"><p>${userMessage}</p><li>`;
+  userInput.value='';
+  const result = await chat.sendMessage(userMessage);
+  const response = await result.response;
+  const botMessage = response.text();
+  chatHistory.innerHTML += `<li class="chat incoming"><span class="material-symbols-outlined">smart_toy</span><p>${botMessage}</p><li>`;
+  console.log(botMessage);
+  chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+  chatbotToggler.addEventListener('click', () => {
+      document.body.classList.toggle("show-chatbot")
+  });
+</script>

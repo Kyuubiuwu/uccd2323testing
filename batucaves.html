@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="test.js"></script>
+    <title>Batu Caves | Malaysia</title>
+  </head>
+  <body>
+    <header style="background-image: linear-gradient(
+      rgba(45, 92, 132, 0.5),
+      rgba(45, 92, 132, 0.5)
+    ), url('https://images.pexels.com/photos/3731615/pexels-photo-3731615.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">   
+    <div id="nav-container"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#nav-container").load("navbar.html");
+        });
+    </script>   
+    <div class="section__container">
+        <div class="header__content">
+          <h1>BATU CAVES</h1>
+          <p>
+            The Batu Caves are a unique blend of natural wonder, religious significance, and cultural vibrancy.
+            Whether you're seeking a spiritual experience, an adventure, or simply a glimpse into Malaysia's rich cultural tapestry, 
+            Batu Caves offers a captivating and memorable experience. 
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="display__container">
+      <div class="section__container">
+        <h2 class="section__title">Activities</h2>
+        <p class="section__subtitle">
+            The world is your playground. Go out and explore! <br>
+          Step outside your comfort zone, the magic happens there.
+        </p>
+        <div class="display__grid">
+          <div class="display__card">
+            <img src="https://images.pexels.com/photos/6026884/pexels-photo-6026884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+              alt="Venture into the heart of a natural wonder, where millions of years of geological formations have created a breathtaking network of caves and caverns. 
+              Challenge yourself with the climb to the top, rewarded with panoramic views and the thrill of exploration. 
+              Discover hidden chambers, marvel at unique rock formations, and encounter playful monkeys along the way."/>
+            <div class="text-overlay">Batu Caves</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://www.miradventures.com/uploads/3/8/3/1/3831761/20170906-102658-resized_orig.jpg" 
+              alt="Whether you're a seasoned pro or a first-time climber, Batu Caves offers routes suitable for all levels. 
+              Expert guides will ensure your safety and provide instruction, allowing you to focus on the exhilaration of reaching new heights. 
+              Discover the joy of rock climbing in this accessible and picturesque location."/>
+            <div class="text-overlay">Rock Climbing</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://myhometown.com.my/wp-content/uploads/2020/04/5381577647325184_1535868293000_BatuCaves_033.jpg" 
+              alt="Experience the unique fusion of spirituality and color at Batu Caves. Ascend the rainbow staircase, a symbol of joy and celebration, 
+              and enter the sacred cave temples dedicated to Lord Murugan. Witness the vibrant hues blend harmoniously with the ancient limestone formations, 
+              creating a truly magical atmosphere."/>
+            <div class="text-overlay">Rainbow Staircase</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://www.roadaffair.com/wp-content/uploads/2021/10/batu-caves-malaysia-shutterstock_585637301.jpg" 
+              alt="Escape the crowds and find a moment of peace and reflection within the serene Ramayana Cave. Unlike the bustling main cave, 
+              this hidden sanctuary offers a quiet space to contemplate the epic tale depicted within its walls. Admire the artistry, 
+              listen to the gentle dripping of water, and connect with the spiritual energy that permeates this sacred space."/>
+            <div class="text-overlay">Ramayana Cave</div>
+          </div>
+        </div>
+      </div>
+       <!-- Popup Modal -->
+    <div class="popup-img">
+      <span>&times;</span>
+      <img src="" alt="Popup Image"/>
+      <div id="description"></div>
+
+    </div>
+    <script>
+      document.querySelectorAll('.display__grid img').forEach(image=>{
+        image.onclick=()=>{
+          document.querySelector('.popup-img').style.display='block';
+          document.querySelector('.popup-img img').src=image.getAttribute('src');
+          var descriptionText = document.getElementById('description');
+          descriptionText.innerHTML = image.getAttribute('alt');
+        }
+        });
+        document.querySelector('.popup-img span').onclick=()=>{
+          document.querySelector('.popup-img').style.display='none';
+        }
+    </script>
+    </section>
+    
+    
+    
+  <section class="slider__container">
+    <div class="section__container">
+      <h2 class="section__title">Galleries</h2>
+      <p class="section__subtitle">
+        "The journey of a thousand miles begins with a single step."
+      </p>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="https://www.roadaffair.com/wp-content/uploads/2021/10/batu-caves-malaysia-shutterstock_1311853067.jpg">
+          </div>
+          <div class="item">
+            <img src="https://dbv47yu57n5vf.cloudfront.net/s3fs-public/editorial/my/2018/August/29/1f6d.jpg">
+          </div>
+          <div class="item">
+            <img src="https://images.pexels.com/photos/14776441/pexels-photo-14776441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+          </div>
+          <div class="item">
+            <img src="https://images.pexels.com/photos/14776432/pexels-photo-14776432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+          </div>
+          <div class="item">
+            <img src="https://cdn.pixabay.com/photo/2019/08/02/19/02/mono-4380328_960_720.jpg">
+          </div>
+          <div class="item">
+            <img src="https://www.roadaffair.com/wp-content/uploads/2021/10/batu-caves-malaysia-shutterstock_1352263733.jpg">
+          </div>
+          <div class="item">
+            <img src="https://www.malaysia.travel/mt-flmngr/files/Batu-Caves/Batu-caves-1.jpg">
+          </div>
+          <div class="item">
+            <img src="https://www.malaysia.travel/mt-flmngr/files/Batu-Caves/Batu-Caves-2.jpg">
+          </div>
+          <div class="item">
+            <img src="https://www.malaysia.travel/mt-flmngr/files/Batu-Caves/Batu-caves-4.jpg">
+          </div>
+          <div class="item">
+            <img src="https://www.miradventures.com/uploads/3/8/3/1/3831761/img-20190726-093805-resized-20200305-084320017_orig.jpg">
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+
+        <!-- indicators -->
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="footerContainer"></div>
+
+  <script>
+      $(document).ready(function() {
+          $("#footerContainer").load("footer.html");
+      });
+  </script>
+  
+  </body>
+</html>

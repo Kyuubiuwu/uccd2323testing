@@ -1,0 +1,453 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f5f2;
+    background: url('https://images.lifestyleasia.com/wp-content/uploads/2018/03/26181942/iStock-595321168.jpg?tr=w-1366') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(0, 0, 0), 0.2;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 20px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar li{
+    list-style: none;
+  }
+  
+  nav .sidebar li a:hover{
+    font-size: 1.5rem;
+    transition: all 0.4s ease;
+    opacity: 1.0;
+  }
+  
+  nav .logo{
+    margin-right: 10px;
+    padding: 10px;
+    width: 80px;
+  }
+  
+  nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav .normalNav li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+  }
+  
+  nav .normalNav li a{
+    text-decoration: none;
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    right: 20px;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .normalNav li a:hover{
+    font-size: 2rem;
+    transition: all 0.4s ease;
+  }
+
+.feedback-container {
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#ccc ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin: 120px auto; /* Push the form down to avoid overlapping with the navbar */
+    box-sizing: border-box;
+}
+
+.feedback-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.feedback-container input[type="text"],
+.feedback-container input[type="email"],
+.feedback-container input[type="url"],
+.feedback-container input[type="range"],
+.feedback-container textarea,
+.feedback-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.feedback-container input[type="range"]{
+    padding: 0;
+}
+
+.feedback-container textarea {
+    resize: vertical;
+}
+
+.feedback-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-container button:hover {
+    background-color: #218838;
+}
+
+.feedback-container input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#consentBox {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#consentContent {
+    max-width: 800px;
+    text-align: center;
+}
+
+#consentHeader {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.consentButton, .rejectButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rejectButton {
+    background-color: #dc3545;
+}
+
+.consentButton:hover {
+    background-color: #218838;
+}
+
+.checkBoxDiv {
+    display: flex;
+    align-items: center;
+  }
+  
+.checkBoxDiv input[type="checkbox"]{
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.rejectButton:hover {
+    background-color: #c82333;
+}
+
+footer {
+    background-color:#ffffff;
+    color: var(--secondary-color);
+  }
+  
+  footer .section__container {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  footer h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .social__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .social__icons i {
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  footer p {
+    font-style: italic;
+  }
+  @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .footer-content {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+  
+    .footer-section {
+        margin: 20px 0; /* Adjust vertical margin as needed */
+    }
+  }
+  
+  footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around; /* Distribute sections evenly */
+  }
+  
+  .footer-section {
+    flex: 1; /* Allow sections to grow and shrink */
+    margin: 0 20px;
+  }
+  
+  .footer-section h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p {
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover{
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .footer-section.social ul li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .footer-section.social a {
+    font-size: 24px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #555; /* Add a subtle top border */
+    padding-top: 20px;
+  }
+  
+  .footer-section ul li a:hover{
+    background-color: #333;
+  }
+@media (max-width: 767px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f5f2;
+        background: url('https://www.perceptivetravel.com/issues/1220/photos/penang-top.JPG') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    
+    @media (max-width: 900px) {
+        .content h1 {
+            font-size: 70px;
+        }
+    
+        .back-video {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #lastControl {
+            width: 8%;
+            height: 5%;
+        }
+    
+        #nextControl {
+            width: 8%;
+            height: 5%;
+        }
+    
+        .content h1 {
+            font-size: 300%;
+            font-weight: 100;
+        }
+    
+        .content h1:hover {
+            font-size: 350%;
+            font-weight: 100;
+        }
+    
+        .content a {
+            font-size: 75%;
+            padding: 3px 10px;
+        }
+    
+        nav ul li a:hover {
+            opacity: 1.0;
+        }
+    
+        nav ul .hide {
+            display: none;
+        }
+    
+        #sidebarOn {
+            display: flex;
+        }
+    }
+    
+    @media (min-width: 900px) {
+        .back-video {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #sidebarOn {
+            display: none;
+        }
+    }
+
+    @media (max-width: 900px) {
+        .content h1 {
+            font-size: 70px;
+        }
+    
+        .back-video {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #lastControl {
+            width: 8%;
+            height: 5%;
+        }
+    
+        #nextControl {
+            width: 8%;
+            height: 5%;
+        }
+    
+        .content h1 {
+            font-size: 300%;
+            font-weight: 100;
+        }
+    
+        .content h1:hover {
+            font-size: 350%;
+            font-weight: 100;
+        }
+    
+        .content a {
+            font-size: 75%;
+            padding: 3px 10px;
+        }
+    
+        nav ul li a:hover {
+            opacity: 1.0;
+        }
+    
+        nav ul .hide {
+            display: none;
+        }
+    
+        #sidebarOn {
+            display: flex;
+        }
+    }
+    
+    @media (min-width: 900px) {
+        .back-video {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #sidebarOn {
+            display: none;
+        }
+    }
+}
+    

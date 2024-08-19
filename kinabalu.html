@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="test.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="test.js"></script>
+    <title>Kota Kinabalu | Malaysia</title>
+  </head>
+  <body>
+    <header style="background-image: linear-gradient(
+      rgba(45, 92, 132, 0.5),
+      rgba(45, 92, 132, 0.5)
+    ), url('https://cdn.pixabay.com/photo/2020/12/04/10/19/mount-kinabalu-5802777_1280.jpg');">
+    <div id="nav-container"></div>
+    <script>
+        $(document).ready(function() {
+            $("#nav-container").load("navbar.html");
+        });
+    </script>      
+    <div class="section__container">
+        <div class="header__content">
+          <h1>KOTA KINABALU</h1>
+          <p>
+            Nestled on the northwest coast of Borneo, Kota Kinabalu, affectionately known as "KK," 
+            is a dynamic city that beautifully blends its rich history with modern aspirations.
+            It serves as the gateway to Sabah's natural wonders, offering visitors a taste of both 
+            urban excitement and pristine wilderness.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="display__container">
+      <div class="section__container">
+        <h2 class="section__title">Activities</h2>
+        <p class="section__subtitle">
+            Life's a journey, not a destination. <br>
+            Make it an unforgettable one.
+        </p>
+        <div class="display__grid">
+          <div class="display__card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/c2/15/fa/photo2jpg.jpg?w=1200&h=-1&s=1" 
+              alt="Just a short boat ride from Kota Kinabalu, Manukan Island beckons with its pristine beaches and vibrant coral reefs 
+              teeming with marine life. Snorkel or dive into crystal-clear waters and encounter a kaleidoscope of colorful fish, playful 
+              sea turtles, and fascinating coral formations. This tropical paradise is a must-visit for any ocean enthusiast seeking an 
+              unforgettable underwater adventure."/>
+            <div class="text-overlay">Manukan Island Snorkelling</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://assets.sabahtravel.com/1200x/https://sabahtravel-assets.s3.amazonaws.com/images/20220531-oh5n2-white-water-rafting-jpg" 
+              alt="Escape the ordinary and embark on a thrilling journey through the heart of Borneo's wilderness. 
+              Paddle through the Kadamaian River's exhilarating rapids, surrounded by lush rainforest and breathtaking mountain vistas. 
+              This unique adventure will leave you with a sense of accomplishment and a deeper appreciation for the natural world."/>
+            <div class="text-overlay">Kadamaian White Water Rafting</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/e0/71/33.jpg" 
+              alt="Step into a world of wonder and discovery at Mari Mari Cultural Village, where you can actively engage with the rich tapestry 
+              of Sabah's cultural heritage. These traditional delicacies, learn ancient crafts, and witness mesmerizing dance performances experience 
+              allows you to connect with the local communities, gain insights into their way of life, and create unforgettable memories."/>
+            <div class="text-overlay">Mari Mari Cultural Village</div>
+          </div>
+    
+          <div class="display__card">
+            <img src="https://assets.sabahtravel.com/1200x/https://sabahtravel-assets.s3.amazonaws.com/images/20191017-932so-group-climb-jpg" 
+              alt="Immerse yourself in the awe-inspiring beauty of Kinabalu Park, a UNESCO World Heritage Site, as you make your way to the summit of 
+              Mount Kinabalu. Encounter unique flora and fauna and witness breathtaking vistas that will leave you speechless. 
+              This trek is a feast for the senses, a celebration of nature's grandeur, and an experience that will connect you with the raw power of the Earth."/>
+            <div class="text-overlay">Mount Kinabalu Climb</div>
+          </div>
+        </div>
+      </div>
+       <!-- Popup Modal -->
+    <div class="popup-img">
+      <span>&times;</span>
+      <img src="" alt="Popup Image"/>
+      <div id="description"></div>
+
+    </div>
+    <script>
+      document.querySelectorAll('.display__grid img').forEach(image=>{
+        image.onclick=()=>{
+          document.querySelector('.popup-img').style.display='block';
+          document.querySelector('.popup-img img').src=image.getAttribute('src');
+          var descriptionText = document.getElementById('description');
+          descriptionText.innerHTML = image.getAttribute('alt');
+        }
+        });
+        document.querySelector('.popup-img span').onclick=()=>{
+          document.querySelector('.popup-img').style.display='none';
+        }
+    </script>
+    </section>
+    
+    
+    
+  <section class="slider__container">
+    <div class="section__container">
+      <h2 class="section__title">Galleries</h2>
+      <p class="section__subtitle">
+        "The world is a book, and those who do not travel read only one page."
+      </p>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20200329-zvs2u-kota-kinabalu-city-at-night-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20200329-ns9ve-signal-hill-kota-kinabalu-overview-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20200329-uferc-floating-mosque-kota-kinabalu-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20230207-t9qhy-dji-0111-01-jpg">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20200329-no02a-sunset-at-seatango-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20201021-3stbf-poring-hot-spring-5-jpg">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20200329-bpt40-sunset-at-sutera-harbour-bar-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20230207-j5mz4-img-20221008-wa0016-01-jpeg">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20201021-sr8q3-tembara-kayak-png">
+          </div>
+          <div class="item">
+            <img src="https://assets.sabahtravel.com/x750/https://sabahtravel-assets.s3.amazonaws.com/images/20220719-p052t-6b-alpaca-club-farm-jpg">
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons">
+          <button id="prev"><</button>
+          <button id="next">></button>
+        </div>
+
+        <!-- indicators -->
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div id="footerContainer"></div>
+
+  <script>
+      $(document).ready(function() {
+          $("#footerContainer").load("footer.html");
+      });
+  </script>
+  </body>
+</html>

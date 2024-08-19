@@ -1,0 +1,79 @@
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .footer-content {
+      flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .footer-section {
+      margin: 20px 0; /* Adjust vertical margin as needed */
+  }
+}
+
+footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; /* Distribute sections evenly */
+}
+
+.footer-section {
+  flex: 1; /* Allow sections to grow and shrink */
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover{
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer-section.social ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-section.social a {
+  font-size: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #555; /* Add a subtle top border */
+  padding-top: 20px;
+}
+
+.footer-section ul li a:hover{
+  background-color: #333;
+}
